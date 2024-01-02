@@ -44,7 +44,7 @@ import java.nio.ByteBuffer
 import kotlin.math.max
 import kotlin.math.min
 
-const val DEFAULT_NOTIFY_TITLE = "RustDesk"
+const val DEFAULT_NOTIFY_TITLE = "Remotend"
 const val DEFAULT_NOTIFY_TEXT = "Service is running"
 const val DEFAULT_NOTIFY_ID = 1
 const val NOTIFY_ID_OFFSET = 100
@@ -65,7 +65,7 @@ const val AUDIO_CHANNEL_MASK = AudioFormat.CHANNEL_IN_STEREO
 class MainService : Service() {
 
     init {
-        System.loadLibrary("rustdesk")
+        System.loadLibrary("remotend")
     }
 
     @Keep
@@ -154,7 +154,7 @@ class MainService : Service() {
     private var serviceHandler: Handler? = null
 
     private val powerManager: PowerManager by lazy { applicationContext.getSystemService(Context.POWER_SERVICE) as PowerManager }
-    private val wakeLock: PowerManager.WakeLock by lazy { powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP or PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "rustdesk:wakelock")}
+    private val wakeLock: PowerManager.WakeLock by lazy { powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP or PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "remotend:wakelock")}
 
     // jvm call rust
     private external fun init(ctx: Context)
@@ -600,13 +600,13 @@ class MainService : Service() {
     private fun initNotification() {
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationChannel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channelId = "RustDesk"
-            val channelName = "RustDesk Service"
+            val channelId = "Remotend"
+            val channelName = "Remotend Service"
             val channel = NotificationChannel(
                 channelId,
                 channelName, NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "RustDesk Service Channel"
+                description = "Remotend Service Channel"
             }
             channel.lightColor = Color.BLUE
             channel.lockscreenVisibility = Notification.VISIBILITY_PRIVATE

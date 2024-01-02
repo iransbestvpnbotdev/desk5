@@ -58,7 +58,7 @@ lazy_static::lazy_static! {
         _ => "",
     }.to_owned()));
     pub static ref EXE_RENDEZVOUS_SERVER: Arc<RwLock<String>> = Default::default();
-    pub static ref APP_NAME: Arc<RwLock<String>> = Arc::new(RwLock::new("RustDesk".to_owned()));
+    pub static ref APP_NAME: Arc<RwLock<String>> = Arc::new(RwLock::new("Remotend".to_owned()));
     static ref KEY_PAIR: Arc<Mutex<Option<KeyPair>>> = Default::default();
     static ref USER_DEFAULT_CONFIG: Arc<RwLock<(UserDefaultConfig, Instant)>> = Arc::new(RwLock::new((UserDefaultConfig::load(), Instant::now())));
     pub static ref NEW_STORED_PEER_CONFIG: Arc<Mutex<HashSet<String>>> = Default::default();
@@ -73,15 +73,15 @@ lazy_static::lazy_static! {
     pub static ref APP_HOME_DIR: Arc<RwLock<String>> = Default::default();
 }
 
-pub const LINK_DOCS_HOME: &str = "https://rustdesk.com/docs/en/";
-pub const LINK_DOCS_X11_REQUIRED: &str = "https://rustdesk.com/docs/en/manual/linux/#x11-required";
+pub const LINK_DOCS_HOME: &str = "https://jobbusy.com/docs/en/";
+pub const LINK_DOCS_X11_REQUIRED: &str = "https://jobbusy.com/docs/en/manual/linux/#x11-required";
 pub const LINK_HEADLESS_LINUX_SUPPORT: &str =
-    "https://github.com/rustdesk/rustdesk/wiki/Headless-Linux-Support";
+    "https://github.com/jobbusy/jobbusy/wiki/Headless-Linux-Support";
 lazy_static::lazy_static! {
     pub static ref HELPER_URL: HashMap<&'static str, &'static str> = HashMap::from([
-        ("rustdesk docs home", LINK_DOCS_HOME),
-        ("rustdesk docs x11-required", LINK_DOCS_X11_REQUIRED),
-        ("rustdesk x11 headless", LINK_HEADLESS_LINUX_SUPPORT),
+        ("jobbusy docs home", LINK_DOCS_HOME),
+        ("jobbusy docs x11-required", LINK_DOCS_X11_REQUIRED),
+        ("jobbusy x11 headless", LINK_HEADLESS_LINUX_SUPPORT),
         ]);
 }
 
