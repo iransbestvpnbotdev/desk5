@@ -670,7 +670,7 @@ class UpdateMe: Reactor.Component {
         handler.open_url("https://jobbusy.com/download");
         return;
         if (!is_win) {
-            handler.open_url("https://jobbusy.com");
+            handler.open_url("https://rustdesk.com");
             return;
         }
         var url = software_update_url + '.' + handler.get_software_ext();
