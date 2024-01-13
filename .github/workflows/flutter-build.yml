@@ -192,7 +192,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install LLVM and Clang
-        uses: remotend-org/install-llvm-action-32bit@master
+        uses: rustdesk-org/install-llvm-action-32bit@master
         with:
           version: ${{ env.LLVM_VERSION }}
 
@@ -827,7 +827,7 @@ jobs:
           $VCPKG_ROOT/vcpkg install --x-install-root="$VCPKG_ROOT/installed"
         shell: bash
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend library for ${{ matrix.job.arch }}
         id: vcpkg
         with:
@@ -1043,7 +1043,7 @@ jobs:
           esac
         shell: bash
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend library for ${{ matrix.job.arch }}
         id: vcpkg
         with:
@@ -1218,7 +1218,7 @@ jobs:
           $VCPKG_ROOT/vcpkg install --triplet arm-linux --x-install-root="$VCPKG_ROOT/installed"
         shell: bash
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend sciter binary for ${{ matrix.job.arch }}
         id: vcpkg
         with:
@@ -1400,7 +1400,7 @@ jobs:
             git reset --hard ${{ env.FLUTTER_ELINUX_COMMIT_ID }}
           popd
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend binary for ${{ matrix.job.arch }}
         id: vcpkg
         with:
@@ -1670,7 +1670,7 @@ jobs:
           name: libremotend-${{ matrix.job.arch }}-${{ matrix.job.extra-build-features }}.so
           path: ./target/release/
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend binary for ${{ matrix.job.arch }}
         id: vcpkg
         with:
@@ -1774,7 +1774,7 @@ jobs:
 
       - name: Build archlinux package
         if: ${{ matrix.job.extra-build-features == '' }}
-        uses: remotend-org/arch-makepkg-action@master
+        uses: rustdesk-org/arch-makepkg-action@master
         with:
           packages: >
             llvm
@@ -1876,7 +1876,7 @@ jobs:
   #       run: |
   #         mv remotend-${{ env.VERSION }}-${{ matrix.job.target }}-${{ matrix.job.os }}.deb remotend-${{ env.VERSION }}.deb
 
-  #     - uses: remotend-org/run-on-arch-action@amd64-support
+  #     - uses: rustdesk-org/run-on-arch-action@amd64-support
   #       name: Build remotend flatpak package for ${{ matrix.job.arch }}
   #       id: rpm
   #       with:
@@ -1947,7 +1947,7 @@ jobs:
         run: |
           mv remotend-${{ env.VERSION }}-${{ matrix.job.arch }}.deb remotend-${{ env.VERSION }}.deb
 
-      - uses: remotend-org/run-on-arch-action@amd64-support
+      - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build remotend flatpak package for ${{ matrix.job.arch }}
         id: rpm
         with:
