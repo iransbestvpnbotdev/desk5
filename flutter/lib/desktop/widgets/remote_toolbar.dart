@@ -938,7 +938,7 @@ class ScreenAdjustor {
   }
 
   updateScreen() async {
-    final v = await rustDeskWinManager.call(
+    final v = await remotendWinManager.call(
         WindowType.Main, kWindowGetWindowInfo, '');
     final String valueStr = v.result;
     if (valueStr.isEmpty) {

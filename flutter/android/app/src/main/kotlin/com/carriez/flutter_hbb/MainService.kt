@@ -154,7 +154,7 @@ class MainService : Service() {
     private var serviceHandler: Handler? = null
 
     private val powerManager: PowerManager by lazy { applicationContext.getSystemService(Context.POWER_SERVICE) as PowerManager }
-    private val wakeLock: PowerManager.WakeLock by lazy { powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP or PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "rustdesk:wakelock")}
+    private val wakeLock: PowerManager.WakeLock by lazy { powerManager.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP or PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "remotend:wakelock")}
 
     // jvm call rust
     private external fun init(ctx: Context)
@@ -460,7 +460,7 @@ class MainService : Service() {
             return
         }
         virtualDisplay = mp.createVirtualDisplay(
-            "RustDeskVD",
+            "remotendVD",
             SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
             surface, null, null
         )
@@ -476,7 +476,7 @@ class MainService : Service() {
             it.setCallback(cb)
             it.start()
             virtualDisplay = mp.createVirtualDisplay(
-                "RustDeskVD",
+                "remotendVD",
                 SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
                 surface, null, null
             )

@@ -56,7 +56,7 @@ class _FileManagerTabPageState extends State<FileManagerTabPage> {
 
     tabController.onRemoved = (_, id) => onRemoveId(id);
 
-    rustDeskWinManager.setMethodHandler((call, fromWindowId) async {
+    remotendWinManager.setMethodHandler((call, fromWindowId) async {
       print(
           "[FileTransfer] call ${call.method} with args ${call.arguments} from window $fromWindowId to ${windowId()}");
       // for simplify, just replace connectionId

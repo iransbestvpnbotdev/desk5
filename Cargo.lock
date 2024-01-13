@@ -5229,7 +5229,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustdesk"
+name = "remotend"
 version = "1.2.4"
 dependencies = [
  "android-wakelock",
@@ -5325,7 +5325,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustdesk-portable-packer"
+name = "remotend-portable-packer"
 version = "0.1.0"
 dependencies = [
  "brotli",

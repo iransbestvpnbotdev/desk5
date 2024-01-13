@@ -1,26 +1,26 @@
 <p align="center">
-  <img src="../res/logo-header.svg" alt="RustDesk – vaše vzdálená plocha"><br>
+  <img src="../res/logo-header.svg" alt="remotend – vaše vzdálená plocha"><br>
   <a href="#free-public-servers">Servery</a> •
   <a href="#raw-steps-to-build">Sestavení ze zdrojových kódů</a> •
   <a href="#how-to-build-with-docker">Docker</a> •
   <a href="#file-structure">Struktura</a> •
   <a href="#snapshot">Ukázky</a><br>
   [<a href="../README.md">English</a>] | [<a href="README-UA.md">Українська</a>] | [<a href="README-ZH.md">中文</a>] | [<a href="README-HU.md">Magyar</a>] | [<a href="README-ES.md">Español</a>] | [<a href="README-FA.md">فارسی</a>] | [<a href="README-FR.md">Français</a>] | [<a href="README-DE.md">Deutsch</a>] | [<a href="README-PL.md">Polski</a>] | [<a href="README-ID.md">Indonesian</a>] | [<a href="README-FI.md">Suomi</a>] | [<a href="README-ML.md">മലയാളം</a>] | [<a href="README-JP.md">日本語</a>] | [<a href="README-NL.md">Nederlands</a>] | [<a href="README-IT.md">Italiano</a>] | [<a href="README-RU.md">Русский</a>] | [<a href="README-PTBR.md">Português (Brasil)</a>] | [<a href="README-EO.md">Esperanto</a>] | [<a href="README-KR.md">한국어</a>] | [<a href="README-AR.md">العربي</a>] | [<a href="README-VN.md">Tiếng Việt</a>] | [<a href="README-GR.md">Ελληνικά</a>]<br>
-  <b>Potřebujeme Vaši pomoc s překladem tohoto README, <a href="https://github.com/rustdesk/rustdesk/tree/master/src/lang">uživatelského rozhraní aplikace RustDesk</a> a <a href="https://github.com/rustdesk/doc.rustdesk.com">dokumentace k ní</a> do vašeho jazyka</b>
+  <b>Potřebujeme Vaši pomoc s překladem tohoto README, <a href="https://github.com/remotend/remotend/tree/master/src/lang">uživatelského rozhraní aplikace remotend</a> a <a href="https://github.com/remotend/doc.remotend.com">dokumentace k ní</a> do vašeho jazyka</b>
 </p>
 
-Popovídejte si s námi: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitter.com/rustdesk) | [Reddit](https://www.reddit.com/r/rustdesk)
+Popovídejte si s námi: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitter.com/remotend) | [Reddit](https://www.reddit.com/r/remotend)
 
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I04VU09)
 
-Zase další software pro přístup k ploše na dálku, naprogramovaný v jazyce Rust. Funguje hned tak, jak je – není třeba žádného nastavování. Svá data máte ve svých rukách, bez obav o zabezpečení. Je možné používat námi poskytovaný propojovací/předávací (relay) server, [vytvořit si svůj vlastní](https://rustdesk.com/server), nebo [si dokonce svůj vlastní naprogramovat](https://github.com/rustdesk/rustdesk-server-demo), budete-li chtít.
+Zase další software pro přístup k ploše na dálku, naprogramovaný v jazyce Rust. Funguje hned tak, jak je – není třeba žádného nastavování. Svá data máte ve svých rukách, bez obav o zabezpečení. Je možné používat námi poskytovaný propojovací/předávací (relay) server, [vytvořit si svůj vlastní](https://remotend.com/server), nebo [si dokonce svůj vlastní naprogramovat](https://github.com/remotend/remotend-server-demo), budete-li chtít.
 
-Projekt RustDesk vítá přiložení ruky k dílu od každého. Jak začít se dozvíte z [`docs/CONTRIBUTING.md`](CONTRIBUTING.md).
+Projekt remotend vítá přiložení ruky k dílu od každého. Jak začít se dozvíte z [`docs/CONTRIBUTING.md`](CONTRIBUTING.md).
 
-[**Jak RustDesk funguje?**](https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F)
+[**Jak remotend funguje?**](https://github.com/remotend/remotend/wiki/How-does-remotend-work%3F)
 
-[**STAHOVÁNÍ ZKOMPILOVANÝCH APLIKACÍ**](https://github.com/rustdesk/rustdesk/releases)
+[**STAHOVÁNÍ ZKOMPILOVANÝCH APLIKACÍ**](https://github.com/remotend/remotend/releases)
 
 ## Veřejné, zdarma službu nabízející servery
 
@@ -51,7 +51,7 @@ Varianta pro mobilní platformy používá aplikační rámec (framework) Flutte
 
 - spusťte `cargo run`
 
-## [Sestavení ze zdrojových kódů](https://rustdesk.com/docs/en/dev/build/)
+## [Sestavení ze zdrojových kódů](https://remotend.com/docs/en/dev/build/)
 
 ## Jak zkompilovat na Linuxu
 
@@ -103,8 +103,8 @@ cd
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
-git clone https://github.com/rustdesk/rustdesk
-cd rustdesk
+git clone https://github.com/remotend/remotend
+cd remotend
 mkdir -p target/debug
 wget https://raw.githubusercontent.com/c-smile/sciter-sdk/master/bin.lnx/x64/libsciter-gtk.so
 mv libsciter-gtk.so target/debug
@@ -116,43 +116,43 @@ VCPKG_ROOT=$HOME/vcpkg cargo run
 Začněte tím, že si naklonujete tento repozitář a sestavíte docker kontejner:
 
 ```sh
-git clone https://github.com/rustdesk/rustdesk
-cd rustdesk
-docker build -t "rustdesk-builder" .
+git clone https://github.com/remotend/remotend
+cd remotend
+docker build -t "remotend-builder" .
 ```
 
 Poté pokaždé, když bude třeba aplikaci sestavit, spusťte následující příkaz:
 
 ```sh
-docker run --rm -it -v $PWD:/home/user/rustdesk -v rustdesk-git-cache:/home/user/.cargo/git -v rustdesk-registry-cache:/home/user/.cargo/registry -e PUID="$(id -u)" -e PGID="$(id -g)" rustdesk-builder
+docker run --rm -it -v $PWD:/home/user/remotend -v remotend-git-cache:/home/user/.cargo/git -v remotend-registry-cache:/home/user/.cargo/registry -e PUID="$(id -u)" -e PGID="$(id -g)" remotend-builder
 ```
 
 Všimněte si, že prvotní sestavení může trvat déle (než se do mezipaměti uloží veškeré softwarové součásti, které jsou potřeba) – následná opakování už budou rychlejší. Pokud navíc potřebujete zadat různé argumenty příkazu pro sestavení, můžete tak učinit na konci příkazu v pozici `<OPTIONAL-ARGS>`. Například, pokud byste chtěli sestavit optimalizovanou verzi pro vydání, spustili byste výše uvedený příkaz následovaný `--release`. Výsledný spustitelný soubor se objeví v cílové složce na vašem systému a bude ho možné spustit pomocí:
 
 ```sh
-target/debug/rustdesk
+target/debug/remotend
 ```
 
 Nebo, pokud spouštíte variantu pro vydání:
 
 ```sh
-target/release/rustdesk
+target/release/remotend
 ```
 
-Ujistěte se, že tyto příkazy spouštíte z kořenového adresáře RustDesk, jinak aplikace nemusí být schopná nalézt potřebné prostředky (resources). Také si všimněte, že ostatní dílčí príkazy nástroje cargo, jako třeba `install` nebo `run` zatím nejsou prostřednictvím této metody podporovány, protože by vedly k instalaci či spuštění program uvnitř kontejneru namísto přímo v systému.
+Ujistěte se, že tyto příkazy spouštíte z kořenového adresáře remotend, jinak aplikace nemusí být schopná nalézt potřebné prostředky (resources). Také si všimněte, že ostatní dílčí príkazy nástroje cargo, jako třeba `install` nebo `run` zatím nejsou prostřednictvím této metody podporovány, protože by vedly k instalaci či spuštění program uvnitř kontejneru namísto přímo v systému.
 
 ## Struktura souborů
 
-- **[libs/hbb_common](https://github.com/rustdesk/rustdesk/tree/master/libs/hbb_common)**: kodek videa, nastavení, obalovaní tcp/udp, vyrovnávací paměť protokolu, funkce souborového systému pro přenos souborů a pár dalších podpůrných funkcí
-- **[libs/scrap](https://github.com/rustdesk/rustdesk/tree/master/libs/scrap)**: zachytávání obsahu obrazovky
-- **[libs/enigo](https://github.com/rustdesk/rustdesk/tree/master/libs/enigo)**: ovládání klávesnice/myši pro jednotlivé platformy
-- **[src/ui](https://github.com/rustdesk/rustdesk/tree/master/src/ui)**: grafické uživatelské rozhraní
-- **[src/server](https://github.com/rustdesk/rustdesk/tree/master/src/server)**: služby pro zvuk/schránku/zadávání/video a síťová spojení
-- **[src/client.rs](https://github.com/rustdesk/rustdesk/tree/master/src/client.rs)**: spouští připojení k protějšku
-- **[src/rendezvous_mediator.rs](https://github.com/rustdesk/rustdesk/tree/master/src/rendezvous_mediator.rs)**: komunikace s [rustdesk-server](https://github.com/rustdesk/rustdesk-server), očekávání vzdálených příméhých („proděrováváním“ TCP) nebo předávaných (relay) spojení
-- **[src/platform](https://github.com/rustdesk/rustdesk/tree/master/src/platform)**: zdrojové kódy, specifické pro jednotlivé platformy
-- **[flutter](https://github.com/rustdesk/rustdesk/tree/master/flutter)**: zdrojové kódy pro použití s aplikačním rámcem (framework) Flutter pro mobilní platformy
-- **[flutter/web/js](https://github.com/rustdesk/rustdesk/tree/master/flutter/web/js)**: Javascript pro Flutter webový klient
+- **[libs/hbb_common](https://github.com/remotend/remotend/tree/master/libs/hbb_common)**: kodek videa, nastavení, obalovaní tcp/udp, vyrovnávací paměť protokolu, funkce souborového systému pro přenos souborů a pár dalších podpůrných funkcí
+- **[libs/scrap](https://github.com/remotend/remotend/tree/master/libs/scrap)**: zachytávání obsahu obrazovky
+- **[libs/enigo](https://github.com/remotend/remotend/tree/master/libs/enigo)**: ovládání klávesnice/myši pro jednotlivé platformy
+- **[src/ui](https://github.com/remotend/remotend/tree/master/src/ui)**: grafické uživatelské rozhraní
+- **[src/server](https://github.com/remotend/remotend/tree/master/src/server)**: služby pro zvuk/schránku/zadávání/video a síťová spojení
+- **[src/client.rs](https://github.com/remotend/remotend/tree/master/src/client.rs)**: spouští připojení k protějšku
+- **[src/rendezvous_mediator.rs](https://github.com/remotend/remotend/tree/master/src/rendezvous_mediator.rs)**: komunikace s [remotend-server](https://github.com/remotend/remotend-server), očekávání vzdálených příméhých („proděrováváním“ TCP) nebo předávaných (relay) spojení
+- **[src/platform](https://github.com/remotend/remotend/tree/master/src/platform)**: zdrojové kódy, specifické pro jednotlivé platformy
+- **[flutter](https://github.com/remotend/remotend/tree/master/flutter)**: zdrojové kódy pro použití s aplikačním rámcem (framework) Flutter pro mobilní platformy
+- **[flutter/web/js](https://github.com/remotend/remotend/tree/master/flutter/web/js)**: Javascript pro Flutter webový klient
 
 ## Ukázky
 

@@ -17,7 +17,7 @@ fn main() {
             host: args[1].clone(),
             api,
         }) {
-            Ok(name) => println!("rustdesk-licensed-{}.exe", name),
+            Ok(name) => println!("remotend-licensed-{}.exe", name),
             Err(e) => println!("{:?}", e),
         }
     }

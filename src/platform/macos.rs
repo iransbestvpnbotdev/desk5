@@ -71,7 +71,7 @@ pub fn is_can_input_monitoring(prompt: bool) -> bool {
 
 // macOS >= 10.15
 // https://stackoverflow.com/questions/56597221/detecting-screen-recording-settings-on-macos-catalina/
-// remove just one app from all the permissions: tccutil reset All com.carriez.rustdesk
+// remove just one app from all the permissions: tccutil reset All com.carriez.remotend
 pub fn is_can_screen_recording(prompt: bool) -> bool {
     // we got some report that we show no permission even after set it, so we try to use new api for screen recording check
     // the new api is only available on macOS >= 10.15, but on stackoverflow, some people said it works on >= 10.16 (crash on 10.15),
@@ -512,8 +512,8 @@ pub fn start_os_service() {
     /* // mouse/keyboard works in prelogin now with launchctl asuser.
        // below can avoid multi-users logged in problem, but having its own below problem.
        // Not find a good way to start --cm without root privilege (affect file transfer).
-       // one way is to start with `launchctl asuser <uid> open -n -a /Applications/RustDesk.app/ --args --cm`,
-       // this way --cm is started with the user privilege, but we will have problem to start another RustDesk.app
+       // one way is to start with `launchctl asuser <uid> open -n -a /Applications/remotend.app/ --args --cm`,
+       // this way --cm is started with the user privilege, but we will have problem to start another remotend.app
        // with open in explorer.
         use std::sync::{
             atomic::{AtomicBool, Ordering},
@@ -620,7 +620,7 @@ pub fn handle_application_should_open_untitled_file() {
     let x = std::env::args().nth(1).unwrap_or_default();
     if x == "--server" || x == "--cm" || x == "--tray" {
         if crate::platform::macos::check_main_window() {
-            allow_err!(crate::ipc::send_url_scheme("rustdesk:".into()));
+            allow_err!(crate::ipc::send_url_scheme("remotend:".into()));
         }
     }
 }

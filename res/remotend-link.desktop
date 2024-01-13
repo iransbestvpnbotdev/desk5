@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=remotendURL Scheme Handler
+NoDisplay=true
+MimeType=x-scheme-handler/remotend;
+TryExec=remotend
+Exec=remotend %u
+Icon=remotend
+Terminal=false
+Type=Application
+StartupNotify=false

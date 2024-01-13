@@ -56,7 +56,7 @@ class _PortForwardTabPageState extends State<PortForwardTabPage> {
 
     tabController.onRemoved = (_, id) => onRemoveId(id);
 
-    rustDeskWinManager.setMethodHandler((call, fromWindowId) async {
+    remotendWinManager.setMethodHandler((call, fromWindowId) async {
       debugPrint(
           "[Port Forward] call ${call.method} with args ${call.arguments} from window $fromWindowId");
       // for simplify, just replace connectionId

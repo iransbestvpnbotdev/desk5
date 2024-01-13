@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "768133699366",
-    "firebase_url": "https://rustdesk.firebaseio.com",
-    "project_id": "rustdesk",
-    "storage_bucket": "rustdesk.appspot.com"
+    "firebase_url": "https://remotend.firebaseio.com",
+    "project_id": "remotend",
+    "storage_bucket": "remotend.appspot.com"
   },
   "client": [
     {

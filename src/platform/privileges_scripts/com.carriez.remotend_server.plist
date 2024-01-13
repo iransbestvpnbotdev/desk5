@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.carriez.RustDesk_server</string>
+        <string>com.carriez.remotend_server</string>
         <key>LimitLoadToSessionType</key>
         <array>
           <string>LoginWindow</string>
@@ -20,10 +20,10 @@
         <true />
         <key>ProgramArguments</key>
         <array>
-            <string>/Applications/RustDesk.app/Contents/MacOS/rustdesk</string>
+            <string>/Applications/remotend.app/Contents/MacOS/remotend</string>
             <string>--server</string>
         </array>
         <key>WorkingDirectory</key>
-        <string>/Applications/RustDesk.app/Contents/MacOS/</string>
+        <string>/Applications/remotend.app/Contents/MacOS/</string>
     </dict>
 </plist>

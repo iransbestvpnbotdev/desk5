@@ -38,10 +38,10 @@ class MultiWindowCallResult {
 /// Window Manager
 /// mainly use it in `Main Window`
 /// use it in sub window is not recommended
-class RustDeskMultiWindowManager {
-  RustDeskMultiWindowManager._();
+class remotendMultiWindowManager {
+  remotendMultiWindowManager._();
 
-  static final instance = RustDeskMultiWindowManager._();
+  static final instance = remotendMultiWindowManager._();
 
   final Set<int> _inactiveWindows = {};
   final Set<int> _activeWindows = {};
@@ -407,7 +407,7 @@ class RustDeskMultiWindowManager {
   /// [Availability]
   /// This function should only be called from main window.
   /// For other windows, please post a unregister(hide) event to main window handler:
-  /// `rustDeskWinManager.call(WindowType.Main, kWindowEventHide, {"id": windowId!});`
+  /// `remotendWinManager.call(WindowType.Main, kWindowEventHide, {"id": windowId!});`
   Future<void> unregisterActiveWindow(int windowId) async {
     _activeWindows.remove(windowId);
     if (windowId != kMainWindowId) {
@@ -425,4 +425,4 @@ class RustDeskMultiWindowManager {
   }
 }
 
-final rustDeskWinManager = RustDeskMultiWindowManager.instance;
+final remotendWinManager = remotendMultiWindowManager.instance;

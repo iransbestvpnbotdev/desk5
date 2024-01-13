@@ -370,7 +370,7 @@ class FfiModel with ChangeNotifier {
       case kUrlActionClose:
         debugPrint("closing all instances");
         Future.microtask(() async {
-          await rustDeskWinManager.closeAllSubWindows();
+          await remotendWinManager.closeAllSubWindows();
           windowManager.close();
         });
         break;

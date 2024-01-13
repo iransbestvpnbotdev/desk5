@@ -142,7 +142,7 @@ void runMainApp(bool startService) async {
       windowManager.show();
       windowManager.focus();
       // Move registration of active main window here to prevent from async visible check.
-      rustDeskWinManager.registerActiveWindow(kWindowMainId);
+      remotendWinManager.registerActiveWindow(kWindowMainId);
     }
     windowManager.setOpacity(1);
     windowManager.setTitle(getWindowName());

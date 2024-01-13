@@ -95,10 +95,10 @@ mod test {
 
     #[test]
     fn test_filename_license_string() {
-        assert!(get_license_from_string("rustdesk.exe").is_err());
-        assert!(get_license_from_string("rustdesk").is_err());
+        assert!(get_license_from_string("remotend.exe").is_err());
+        assert!(get_license_from_string("remotend").is_err());
         assert_eq!(
-            get_license_from_string("rustdesk-host=server.example.net.exe").unwrap(),
+            get_license_from_string("remotend-host=server.example.net.exe").unwrap(),
             License {
                 host: "server.example.net".to_owned(),
                 key: "".to_owned(),
@@ -106,7 +106,7 @@ mod test {
             }
         );
         assert_eq!(
-            get_license_from_string("rustdesk-host=server.example.net,.exe").unwrap(),
+            get_license_from_string("remotend-host=server.example.net,.exe").unwrap(),
             License {
                 host: "server.example.net".to_owned(),
                 key: "".to_owned(),
@@ -116,7 +116,7 @@ mod test {
         // key in these tests is "foobar.,2" base64 encoded
         assert_eq!(
             get_license_from_string(
-                "rustdesk-host=server.example.net,api=abc,key=Zm9vYmFyLiwyCg==.exe"
+                "remotend-host=server.example.net,api=abc,key=Zm9vYmFyLiwyCg==.exe"
             )
             .unwrap(),
             License {
@@ -126,7 +126,7 @@ mod test {
             }
         );
         assert_eq!(
-            get_license_from_string("rustdesk-host=server.example.net,key=Zm9vYmFyLiwyCg==,.exe")
+            get_license_from_string("remotend-host=server.example.net,key=Zm9vYmFyLiwyCg==,.exe")
                 .unwrap(),
             License {
                 host: "server.example.net".to_owned(),

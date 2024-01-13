@@ -406,7 +406,7 @@ class DesktopTab extends StatelessWidget {
                         Offstage(
                             offstage: !showTitle,
                             child: const Text(
-                              "RustDesk",
+                              "remotend",
                               style: TextStyle(fontSize: 13),
                             ).marginOnly(left: 2))
                       ]).marginOnly(
@@ -594,7 +594,7 @@ class WindowActionPanelState extends State<WindowActionPanel>
         widget.tabController.clear();
       }
       await controller.hide();
-      await rustDeskWinManager
+      await remotendWinManager
           .call(WindowType.Main, kWindowEventHide, {"id": kWindowId!});
     }
 
@@ -616,8 +616,8 @@ class WindowActionPanelState extends State<WindowActionPanel>
 
     // hide window on close
     if (widget.isMainWindow) {
-      if (rustDeskWinManager.getActiveWindows().contains(kMainWindowId)) {
-        await rustDeskWinManager.unregisterActiveWindow(kMainWindowId);
+      if (remotendWinManager.getActiveWindows().contains(kMainWindowId)) {
+        await remotendWinManager.unregisterActiveWindow(kMainWindowId);
       }
       // macOS specific workaround, the window is not hiding when in fullscreen.
       if (Platform.isMacOS && await windowManager.isFullScreen()) {
@@ -1175,7 +1175,7 @@ class AddButton extends StatelessWidget {
     return ActionIcon(
         message: 'New Connection',
         icon: IconFont.add,
-        onTap: () => rustDeskWinManager.call(
+        onTap: () => remotendWinManager.call(
             WindowType.Main, kWindowMainWindowOnTop, ""),
         isClose: false);
   }

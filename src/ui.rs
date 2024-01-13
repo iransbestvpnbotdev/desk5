@@ -49,7 +49,7 @@ pub fn start(args: &mut [String]) {
         let dir = "/app";
         #[cfg(not(feature = "flatpak"))]
         let dir = "/usr";
-        sciter::set_library(&(prefix + dir + "/lib/rustdesk/libsciter-gtk.so")).ok();
+        sciter::set_library(&(prefix + dir + "/lib/remotend/libsciter-gtk.so")).ok();
     }
     #[cfg(windows)]
     // Check if there is a sciter.dll nearby.

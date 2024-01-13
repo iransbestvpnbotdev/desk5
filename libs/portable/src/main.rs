@@ -9,8 +9,8 @@ use bin_reader::BinaryReader;
 
 pub mod bin_reader;
 
-const APP_PREFIX: &str = "rustdesk";
-const APPNAME_RUNTIME_ENV_KEY: &str = "RUSTDESK_APPNAME";
+const APP_PREFIX: &str = "remotend";
+const APPNAME_RUNTIME_ENV_KEY: &str = "remotend_APPNAME";
 
 fn setup(reader: BinaryReader, dir: Option<PathBuf>, clear: bool) -> Option<PathBuf> {
     let dir = if let Some(dir) = dir {
@@ -94,7 +94,7 @@ mod windows {
 
     // Used for privacy mode(magnifier impl).
     pub const RUNTIME_BROKER_EXE: &'static str = "C:\\Windows\\System32\\RuntimeBroker.exe";
-    pub const WIN_TOPMOST_INJECTED_PROCESS_EXE: &'static str = "RuntimeBroker_rustdesk.exe";
+    pub const WIN_TOPMOST_INJECTED_PROCESS_EXE: &'static str = "RuntimeBroker_remotend.exe";
 
     pub(super) fn copy_runtime_broker(dir: &PathBuf) {
         let src = RUNTIME_BROKER_EXE;
@@ -110,7 +110,7 @@ mod windows {
             }
         }
         let _allow_err = Command::new("taskkill")
-            .args(&["/F", "/IM", "RuntimeBroker_rustdesk.exe"])
+            .args(&["/F", "/IM", "RuntimeBroker_remotend.exe"])
             .creation_flags(winapi::um::winbase::CREATE_NO_WINDOW)
             .output();
         let _allow_err = std::fs::copy(src, &format!("{}\\{}", dir.to_string_lossy(), tgt));
