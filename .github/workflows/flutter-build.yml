@@ -1874,7 +1874,7 @@ jobs:
 
   #     - name: Rename Binary
   #       run: |
-  #         mv remotend-${{ env.VERSION }}-${{ matrix.job.target }}-${{ matrix.job.os }}.deb remotend-${{ env.VERSION }}.deb
+  #         mv rustdesk-${{ env.VERSION }}-${{ matrix.job.target }}-${{ matrix.job.os }}.deb remotend-${{ env.VERSION }}.deb
 
   #     - uses: rustdesk-org/run-on-arch-action@amd64-support
   #       name: Build remotend flatpak package for ${{ matrix.job.arch }}
@@ -1940,15 +1940,15 @@ jobs:
       - name: Download Binary
         uses: actions/download-artifact@master
         with:
-          name: remotend-${{ env.VERSION }}-${{ matrix.job.arch }}.deb
+          name: rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.deb
           path: .
 
       - name: Rename Binary
         run: |
-          mv remotend-${{ env.VERSION }}-${{ matrix.job.arch }}.deb remotend-${{ env.VERSION }}.deb
+          mv rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.deb rustdesk-${{ env.VERSION }}.deb
 
       - uses: rustdesk-org/run-on-arch-action@amd64-support
-        name: Build remotend flatpak package for ${{ matrix.job.arch }}
+        name: Build rustdesk flatpak package for ${{ matrix.job.arch }}
         id: rpm
         with:
           arch: ${{ matrix.job.arch }}
@@ -1991,7 +1991,7 @@ jobs:
             pushd flatpak
             git clone https://github.com/flathub/shared-modules.git --depth=1
             flatpak-builder --user --force-clean --repo=repo ./build ./remotend.json
-            flatpak build-bundle ./repo remotend-${{ env.VERSION }}-${{ matrix.job.arch }}.flatpak com.remotend.remotend
+            flatpak build-bundle ./repo rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.flatpak com.remotend.remotend
 
       - name: Publish flatpak package
         uses: softprops/action-gh-release@v1
@@ -2000,4 +2000,4 @@ jobs:
           prerelease: true
           tag_name: ${{ env.TAG_NAME }}
           files: |
-            flatpak/remotend-${{ env.VERSION }}-${{ matrix.job.arch }}.flatpak
+            flatpak/rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.flatpak
