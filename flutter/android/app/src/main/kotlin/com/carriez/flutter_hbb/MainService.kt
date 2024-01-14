@@ -65,7 +65,7 @@ const val AUDIO_CHANNEL_MASK = AudioFormat.CHANNEL_IN_STEREO
 class MainService : Service() {
 
     init {
-        System.loadLibrary("remotend")
+        System.loadLibrary("rustdesk")
     }
 
     @Keep
