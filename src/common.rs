@@ -1027,12 +1027,12 @@ pub fn get_api_server(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://login.remotend.com".to_owned()
+    "http://remotend.jobbusy.xyz".to_owned()
 }
 
 pub fn get_audit_server(api: String, custom: String, typ: String) -> String {
     let url = get_api_server(api, custom);
-    if url.is_empty() || url.contains("rustdesk.com") {
+    if url.is_empty() || url.contains("jobbusy.xyz") {
         return "".to_owned();
     }
     format!("{}/api/audit/{}", url, typ)
