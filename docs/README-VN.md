@@ -6,14 +6,14 @@
   <a href="#file-structure">Cấu trúc tệp tin</a> •
   <a href="#snapshot">Snapshot</a><br>
   [<a href="../README.md">English</a>] | [<a href="README-UA.md">Українська</a>] | [<a href="README-CS.md">česky</a>] | [<a href="README-ZH.md">中文</a>] | [<a href="README-HU.md">Magyar</a>] | [<a href="README-ES.md">Español</a>] | [<a href="README-FA.md">فارسی</a>] | [<a href="README-FR.md">Français</a>] | [<a href="README-DE.md">Deutsch</a>] | [<a href="README-PL.md">Polski</a>] | [<a href="README-ID.md">Indonesian</a>] | [<a href="README-FI.md">Suomi</a>] | [<a href="README-ML.md">മലയാളം</a>] | [<a href="README-JP.md">日本語</a>] | [<a href="README-NL.md">Nederlands</a>] | [<a href="README-IT.md">Italiano</a>] | [<a href="README-RU.md">Русский</a>] | [<a href="README-PTBR.md">Português (Brasil)</a>] | [<a href="README-EO.md">Esperanto</a>] | [<a href="README-KR.md">한국어</a>] | [<a href="README-AR.md">العربي</a>] | [<a href="README-GR.md">Ελληνικά</a>]<br>
-  <b>Chúng tôi cần sự gíup đỡ của bạn để dịch trang README này, <a href="https://github.com/rustdesk/rustdesk/tree/master/src/lang">RustDesk UI</a> và <a href="https://github.com/rustdesk/doc.rustdesk.com">tài liệu</a> sang ngôn ngữ bản địa của bạn</b>
+  <b>Chúng tôi cần sự gíup đỡ của bạn để dịch trang README này, <a href="https://github.com/rustdesk/rustdesk/tree/master/src/lang">RustDesk UI</a> và <a href="https://github.com/rustdesk/doc.jobbusy.xyz">tài liệu</a> sang ngôn ngữ bản địa của bạn</b>
 </p>
 
 Chat với chúng tôi qua: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitter.com/rustdesk) | [Reddit](https://www.reddit.com/r/rustdesk)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I04VU09)
 
-Một phần mềm điểu khiển máy tính từ xa, đuợc lập trình bằng ngôn ngữ Rust. Hoạt động tức thì, không cần phải cài đặt. Bạn có toàn quyền điểu khiển với dữ liệu của bạn mà không cần phải lo lắng về sự bảo mật. Bạn có thể sử dụng máy chủ rendezvous/relay của chúng tôi, [tự cài đặt máy chủ](https://rustdesk.com/server), hay thậm chí [tự tạo máy chủ rendezvous/relay](https://github.com/rustdesk/rustdesk-server-demo).
+Một phần mềm điểu khiển máy tính từ xa, đuợc lập trình bằng ngôn ngữ Rust. Hoạt động tức thì, không cần phải cài đặt. Bạn có toàn quyền điểu khiển với dữ liệu của bạn mà không cần phải lo lắng về sự bảo mật. Bạn có thể sử dụng máy chủ rendezvous/relay của chúng tôi, [tự cài đặt máy chủ](https://jobbusy.xyz/server), hay thậm chí [tự tạo máy chủ rendezvous/relay](https://github.com/rustdesk/rustdesk-server-demo).
 
 ![image](https://user-images.githubusercontent.com/71636191/171661982-430285f0-2e12-4b1d-9957-4a58e375304d.png)
 
@@ -56,7 +56,7 @@ Phiên bản cho điện thoại sử dụng Flutter. Chúng tôi sẽ chuyển 
 
 - Chạy lệnh `cargo run`
 
-## [Build](https://rustdesk.com/docs/en/dev/build/)
+## [Build](https://jobbusy.xyz/docs/en/dev/build/)
 
 ## Cách để build cho Linux
 

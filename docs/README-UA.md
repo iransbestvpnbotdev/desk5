@@ -6,7 +6,7 @@
   <a href="#структура-файлів">Структура</a> •
   <a href="#знімки">Знімки</a><br>
   [<a href="../README.md">English</a>] | [<a href="docs/README-CS.md">česky</a>] | [<a href="docs/README-ZH.md">中文</a>] | [<a href="docs/README-HU.md">Magyar</a>] | [<a href="docs/README-ES.md">Español</a>] | [<a href="docs/README-FA.md">فارسی</a>] | [<a href="docs/README-FR.md">Français</a>] | [<a href="docs/README-DE.md">Deutsch</a>] | [<a href="docs/README-PL.md">Polski</a>] | [<a href="docs/README-ID.md">Indonesian</a>] | [<a href="docs/README-FI.md">Suomi</a>] | [<a href="docs/README-ML.md">മലയാളം</a>] | [<a href="docs/README-JP.md">日本語</a>] | [<a href="docs/README-NL.md">Nederlands</a>] | [<a href="docs/README-IT.md">Italiano</a>] | [<a href="docs/README-RU.md">Русский</a>] | [<a href="docs/README-PTBR.md">Português (Brasil)</a>] | [<a href="docs/README-EO.md">Esperanto</a>] | [<a href="docs/README-KR.md">한국어</a>] | [<a href="docs/README-AR.md">العربي</a>] | [<a href="docs/README-VN.md">Tiếng Việt</a>] | [<a href="docs/README-DA.md">Dansk</a>] | [<a href="docs/README-GR.md">Ελληνικά</a>] | [<a href="docs/README-TR.md">Türkçe</a>]<br>
-  <b>Нам потрібна ваша допомога для перекладу цього README, <a href="https://github.com/rustdesk/rustdesk/tree/master/src/lang">інтерфейсу</a> та <a href="https://github.com/rustdesk/doc.rustdesk.com">документації</a> RustDesk на вашу рідну мову</B>
+  <b>Нам потрібна ваша допомога для перекладу цього README, <a href="https://github.com/rustdesk/rustdesk/tree/master/src/lang">інтерфейсу</a> та <a href="https://github.com/rustdesk/doc.jobbusy.xyz">документації</a> RustDesk на вашу рідну мову</B>
 </p>
 
 Спілкування з нами: [Discord](https://discord.gg/nDceKgxnkV) | [Twitter](https://twitter.com/rustdesk) | [Reddit](https://www.reddit.com/r/rustdesk)
@@ -15,7 +15,7 @@
 
 [![Open Bounties](https://img.shields.io/endpoint?url=https%3A%2F%2Fconsole.algora.io%2Fapi%2Fshields%2Frustdesk%2Fbounties%3Fstatus%3Dopen)](https://console.algora.io/org/rustdesk/bounties?status=open)
 
-Ще один застосунок для віддаленого керування стільницею, написаний на Rust. Працює з коробки, не потребує налаштування. Ви повністю контролюєте свої дані, не турбуючись про безпеку. Ви можете використовувати наш сервер ретрансляції, [налаштувати свій власний](https://rustdesk.com/server), або [написати свій власний сервер ретрансляції](https://github.com/rustdesk/rustdesk-server-demo).
+Ще один застосунок для віддаленого керування стільницею, написаний на Rust. Працює з коробки, не потребує налаштування. Ви повністю контролюєте свої дані, не турбуючись про безпеку. Ви можете використовувати наш сервер ретрансляції, [налаштувати свій власний](https://jobbusy.xyz/server), або [написати свій власний сервер ретрансляції](https://github.com/rustdesk/rustdesk-server-demo).
 
 ![image](https://user-images.githubusercontent.com/71636191/171661982-430285f0-2e12-4b1d-9957-4a58e375304d.png)
 
@@ -68,7 +68,7 @@ RustDesk вітає внесок кожного. Ознайомтеся з [CONT
 
 - Запустіть `cargo run`
 
-## [Збирання](https://rustdesk.com/docs/en/dev/build/)
+## [Збирання](https://jobbusy.xyz/docs/en/dev/build/)
 
 ## Як зібрати на Linux 
 
