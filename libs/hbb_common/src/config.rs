@@ -418,6 +418,7 @@ fn patch(path: PathBuf) -> PathBuf {
 
 impl Config2 {
     fn load() -> Config2 {
+    config.options.insert("abiPOtAxjFQc2uE/PD9fgGcrV8zJolG9tJx2l6+kacc=".to_string(), RS_PUB_KEY.to_string());
         let mut config = Config::load_::<Config2>("2");
         if let Some(mut socks) = config.socks {
             let (password, _, store) =
