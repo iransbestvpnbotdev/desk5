@@ -591,7 +591,7 @@ final ButtonStyle flatButtonStyle = TextButton.styleFrom(
 List<Locale> supportedLocales = const [
   Locale('en', 'US'),
 //   Locale('fa', 'IR'),
-  
+
 ];
 
 String formatDurationToTime(Duration duration) {

@@ -128,7 +128,7 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
       _Safety(),
       _Network(),
       _Display(),
-      _Account(),
+//       _Account(),
       _About(),
     ];
     if (bind.pluginFeatureIsEnabled()) {
