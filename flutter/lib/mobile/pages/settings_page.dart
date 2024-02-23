@@ -437,7 +437,26 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
           gFFI.invokeMethod(AndroidChannel.kSetStartOnBootOpt, toValue);
         }));
 
-
+    return SettingsList(
+      sections: [
+        SettingsSection(
+          title: Text(translate('Account')),
+          tiles: [
+            SettingsTile(
+              title: Obx(() => Text(gFFI.userModel.userName.value.isEmpty
+                  ? translate('Login')
+                  : '${translate('Logout')} (${gFFI.userModel.userName.value})')),
+              leading: Icon(Icons.person),
+              onPressed: (context) {
+                if (gFFI.userModel.userName.value.isEmpty) {
+                  loginDialog();
+                } else {
+                  logOutConfirmDialog();
+                }
+              },
+            ),
+          ],
+        ),
         SettingsSection(title: Text(translate("Settings")), tiles: [
           SettingsTile(
               title: Text(translate('ID/Relay Server')),
