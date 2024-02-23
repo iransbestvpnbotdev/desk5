@@ -112,7 +112,6 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
       _TabInfo('Network', Icons.link_outlined, Icons.link),
       _TabInfo(
           'Display', Icons.desktop_windows_outlined, Icons.desktop_windows),
-      _TabInfo('Account', Icons.person_outline, Icons.person),
       _TabInfo('About', Icons.info_outline, Icons.info)
     ];
     if (bind.pluginFeatureIsEnabled()) {
