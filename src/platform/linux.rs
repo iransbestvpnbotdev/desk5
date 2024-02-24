@@ -1252,7 +1252,7 @@ fn switch_service(stop: bool) -> String {
     let home = std::env::var("HOME").unwrap_or_default();
     Config::set_option("stop-service".into(), if stop { "Y" } else { "" }.into());
     if home != "/root" && !Config::get().is_empty() {
-        format!("cp -f {home}/.config/rustdesk/RustDesk.toml /root/.config/rustdesk/; cp -f {home}/.config/rustdesk/RustDesk2.toml /root/.config/rustdesk/;")
+        format!("cp -f {home}/.config/rustdesk/RemoTend.toml /root/.config/rustdesk/; cp -f {home}/.config/rustdesk/RustDesk2.toml /root/.config/rustdesk/;")
     } else {
         "".to_owned()
     }
@@ -1304,7 +1304,7 @@ fn check_if_stop_service() {
 pub fn check_autostart_config() -> ResultType<()> {
     let home = std::env::var("HOME").unwrap_or_default();
     let path = format!("{home}/.config/autostart");
-    let file = format!("{path}/rustdesk.desktop");
+    let file = format!("{path}/remotend.desktop");
     std::fs::create_dir_all(&path).ok();
     if !Path::new(&file).exists() {
         // write text to the desktop file

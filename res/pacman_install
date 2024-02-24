@@ -5,9 +5,9 @@
 # arg 1:  the new package version
 post_install() {
 	# do something here
-	cp /usr/share/rustdesk/files/rustdesk.service /etc/systemd/system/rustdesk.service
-	cp /usr/share/rustdesk/files/rustdesk.desktop /usr/share/applications/
-	cp /usr/share/rustdesk/files/rustdesk-link.desktop /usr/share/applications/
+	cp /usr/share/rustdesk/files/remotend.service /etc/systemd/system/remotend.service
+	cp /usr/share/rustdesk/files/remotend.desktop /usr/share/applications/
+	cp /usr/share/rustdesk/files/remotend-link.desktop /usr/share/applications/
 	systemctl daemon-reload
 	systemctl enable rustdesk
 	systemctl start rustdesk
@@ -23,9 +23,9 @@ pre_upgrade() {
 # arg 1:  the new package version
 # arg 2:  the old package version
 post_upgrade() {
-	cp /usr/share/rustdesk/files/rustdesk.service /etc/systemd/system/rustdesk.service
-	cp /usr/share/rustdesk/files/rustdesk.desktop /usr/share/applications/
-	cp /usr/share/rustdesk/files/rustdesk-link.desktop /usr/share/applications/
+	cp /usr/share/rustdesk/files/remotend.service /etc/systemd/system/remotend.service
+	cp /usr/share/rustdesk/files/remotend.desktop /usr/share/applications/
+	cp /usr/share/rustdesk/files/remotend-link.desktop /usr/share/applications/
 	systemctl daemon-reload
 	systemctl enable rustdesk
 	systemctl start rustdesk
@@ -36,12 +36,12 @@ post_upgrade() {
 pre_remove() {
 	systemctl stop rustdesk || true
 	systemctl disable rustdesk || true
-	rm /etc/systemd/system/rustdesk.service || true
+	rm /etc/systemd/system/remotend.service || true
 }
 
 # arg 1:  the old package version
 post_remove() {
-	rm /usr/share/applications/rustdesk.desktop || true
-	rm /usr/share/applications/rustdesk-link.desktop || true
+	rm /usr/share/applications/remotend.desktop || true
+	rm /usr/share/applications/remotend-link.desktop || true
 	update-desktop-database
 }

@@ -54,7 +54,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
     for (const auto& argument : command_line_arguments) {
       args_str += (argument + " ");
     }
-    // std::cout << "RustDesk [" << args_str << "], core returns false, exiting without launching Flutter app." << std::endl;
+    // std::cout << "RemoTend [" << args_str << "], core returns false, exiting without launching Flutter app." << std::endl;
     return EXIT_SUCCESS;
   }
   std::vector<std::string> rust_args(c_args, c_args + args_len);
@@ -112,7 +112,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   Win32Window::Point origin(10, 10);
   Win32Window::Size size(800, 600);
   if (!window.CreateAndShow(
-          is_cm_page ? L"RustDesk - Connection Manager" : L"RustDesk", origin,
+          is_cm_page ? L"RemoTend - Connection Manager" : L"RemoTend", origin,
           size, !is_cm_page)) {
       return EXIT_FAILURE;
   }

@@ -1,0 +1,49 @@
+{
+  "id": "com.Remotend.Remotend",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "remotend",
+  "icon": "share/icons/hicolor/scalable/apps/rustdesk.svg",
+  "modules": [
+    "shared-modules/libappindicator/libappindicator-gtk3-12.10.json",
+    "xdotool.json",
+    {
+      "name": "remotend",
+      "buildsystem": "simple",
+      "build-commands": [
+        "bsdtar -zxvf remotend-1.2.4.deb",
+        "tar -xvf ./data.tar.xz",
+        "cp -r ./usr/*  /app/",
+        "mkdir -p /app/bin && ln -s /app/lib/remotend/remotend /app/bin/remotend",
+        "mv /app/share/applications/remotend.desktop /app/share/applications/com.Remotend.Remotend.desktop",
+        "sed -i '/^Icon=/ c\\Icon=com.remotend.remotend' /app/share/applications/com.Remotend.Remotend.desktop",
+        "sed -i '/^Icon=/ c\\Icon=com.remotend.remotend' /app/share/applications/Remotend-link.desktop",
+        "mv /app/share/icons/hicolor/scalable/apps/remotend.svg /app/share/icons/hicolor/scalable/apps/com.remotend.remotend.svg",
+        "for size in 16 24 32 48 64 128 256 512; do\n rsvg-convert -w $size -h $size -f png -o $size.png logo.svg\n install -Dm644 $size.png /app/share/icons/hicolor/${size}x${size}/apps/com.remotend.remotend.png\n done"
+      ],
+      "cleanup": ["/include", "/lib/pkgconfig", "/share/gtk-doc"],
+      "sources": [
+        {
+          "type": "file",
+          "path": "../remotend-1.2.4.deb"
+        },
+        {
+          "type": "file",
+          "path": "../res/logo.svg"
+        }
+      ]
+    }
+  ],
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--share=network",
+    "--filesystem=home",
+    "--device=dri",
+    "--socket=pulseaudio",
+    "--talk-name=org.freedesktop.Flatpak"
+  ]
+}
