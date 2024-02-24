@@ -590,28 +590,8 @@ final ButtonStyle flatButtonStyle = TextButton.styleFrom(
 
 List<Locale> supportedLocales = const [
   Locale('en', 'US'),
-  Locale('zh', 'CN'),
-  Locale('zh', 'TW'),
-  Locale('zh', 'SG'),
-  Locale('fr'),
-  Locale('de'),
-  Locale('it'),
-  Locale('ja'),
-  Locale('cs'),
-  Locale('pl'),
-  Locale('ko'),
-  Locale('hu'),
-  Locale('pt'),
-  Locale('ru'),
-  Locale('sk'),
-  Locale('id'),
-  Locale('da'),
-  Locale('eo'),
-  Locale('tr'),
-  Locale('vi'),
-  Locale('pl'),
-  Locale('kz'),
-  Locale('es'),
+//   Locale('fa', 'IR'),
+
 ];
 
 String formatDurationToTime(Duration duration) {

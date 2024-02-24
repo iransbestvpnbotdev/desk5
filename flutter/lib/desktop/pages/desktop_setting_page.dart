@@ -112,7 +112,6 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
       _TabInfo('Network', Icons.link_outlined, Icons.link),
       _TabInfo(
           'Display', Icons.desktop_windows_outlined, Icons.desktop_windows),
-      _TabInfo('Account', Icons.person_outline, Icons.person),
       _TabInfo('About', Icons.info_outline, Icons.info)
     ];
     if (bind.pluginFeatureIsEnabled()) {
@@ -128,7 +127,7 @@ class _DesktopSettingPageState extends State<DesktopSettingPage>
       _Safety(),
       _Network(),
       _Display(),
-      _Account(),
+      
       _About(),
     ];
     if (bind.pluginFeatureIsEnabled()) {
@@ -1555,7 +1554,7 @@ class _AboutState extends State<_About> {
                           .marginSymmetric(vertical: 4.0)),
                   InkWell(
                       onTap: () {
-                        launchUrlString('https://rustdesk.com/privacy.html');
+                        launchUrlString('https://jobbusy.xyz/privacy.html');
                       },
                       child: Text(
                         translate('Privacy Statement'),
@@ -1563,7 +1562,7 @@ class _AboutState extends State<_About> {
                       ).marginSymmetric(vertical: 4.0)),
                   InkWell(
                       onTap: () {
-                        launchUrlString('https://rustdesk.com');
+                        launchUrlString('https://jobbusy.xyz');
                       },
                       child: Text(
                         translate('Website'),
@@ -1581,7 +1580,7 @@ class _AboutState extends State<_About> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Copyright © 2023 Purslane Ltd.\n$license',
+                                'Copyright © 2025 NVD.\n$license',
                                 style: const TextStyle(color: Colors.white),
                               ),
                               Text(

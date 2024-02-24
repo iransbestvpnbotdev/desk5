@@ -25,15 +25,13 @@ class PeerTabModel with ChangeNotifier {
     'Recent sessions',
     'Favorites',
     'Discovered',
-    'Address book',
-    'Group',
+    
   ];
   final List<IconData> icons = [
     Icons.access_time_filled,
     Icons.star,
     Icons.explore,
-    IconFont.addressBook,
-    Icons.group,
+   
   ];
   final List<bool> _isVisible = List.filled(5, true, growable: false);
   List<bool> get isVisible => _isVisible;
