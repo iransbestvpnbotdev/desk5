@@ -61,7 +61,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   free_c_args(c_args, args_len);
 
   // Uri links dispatch
-  HWND hwnd = ::FindWindow(_T("FLUTTER_RUNNER_WIN32_WINDOW"), _T("RustDesk"));
+  HWND hwnd = ::FindWindow(_T("FLUTTER_RUNNER_WIN32_WINDOW"), _T("Remotend"));
   if (hwnd != NULL) {
     // Allow multiple flutter instances when being executed by parameters
     // contained in whitelists.
