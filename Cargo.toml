@@ -1,11 +1,11 @@
 [package]
-name = "rustdesk"
+name = "remotend"
 version = "1.2.4"
 authors = ["remotend <info@jobbusy.com>"]
 edition = "2021"
 build= "build.rs"
 description = "remote control."
-default-run = "rustdesk"
+default-run = "remotend"
 rust-version = "1.75"
 
 [lib]

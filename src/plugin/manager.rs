@@ -216,7 +216,7 @@ fn elevate_uninstall(plugin_id: &str) -> ResultType<bool> {
 fn elevate_uninstall(plugin_id: &str) -> ResultType<bool> {
     crate::platform::elevate(
         vec!["--plugin-uninstall", plugin_id],
-        "RustDesk wants to uninstall the plugin",
+        "remotend wants to uninstall the plugin",
     )
 }
 

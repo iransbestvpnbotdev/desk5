@@ -2219,7 +2219,7 @@ Future<void> onActiveWindowChanged() async {
     } catch (err) {
       debugPrintStack(label: "$err");
     } finally {
-      debugPrint("Start closing RustDesk...");
+      debugPrint("Start closing remotend...");
       await windowManager.setPreventClose(false);
       await windowManager.close();
       if (Platform.isMacOS) {
@@ -2408,17 +2408,17 @@ int versionCmp(String v1, String v2) {
 String getWindowName({WindowType? overrideType}) {
   switch (overrideType ?? kWindowType) {
     case WindowType.Main:
-      return "RustDesk";
+      return "Remotend";
     case WindowType.FileTransfer:
-      return "File Transfer - RustDesk";
+      return "File Transfer - Remotend";
     case WindowType.PortForward:
-      return "Port Forward - RustDesk";
+      return "Port Forward - Remotend";
     case WindowType.RemoteDesktop:
-      return "Remote Desktop - RustDesk";
+      return "Remote Desktop - Remotend";
     default:
       break;
   }
-  return "RustDesk";
+  return "Remotend";
 }
 
 String getWindowNameWithId(String id, {WindowType? overrideType}) {
